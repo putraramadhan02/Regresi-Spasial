@@ -1,1 +1,19 @@
+---
+title: "Pengenalan Data Spasial"
+author: "Elardian Putera Ramadhan (G1401231042)"
+date: "2025-08-20"
+output: html_document
+---
+
+```{r}
+library(sf)
+library(mapview)
+```
+
+
+```{r}
+d <- st_read(system.file("shape/nc.shp", package = "sf"),
+             quiet = TRUE)
+mapview(d, zcol = "SID74")
+```
 
